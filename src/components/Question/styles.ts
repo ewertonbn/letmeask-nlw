@@ -1,4 +1,6 @@
-.question {
+import styled from 'styled-components';
+
+export const QuestionContent = styled.div`
   background: #fefefe;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
@@ -6,6 +8,19 @@
 
   & + .question {
     margin-top: 8px;
+  }
+
+  &.highlighted {
+    background: #F4F0FF;
+    border: 1px solid #835adf;
+
+    footer .user-info span {
+       color: #29292e;
+    }
+  }
+
+  &.answered {
+    background: #dbdcdd;
   }
 
   p {
@@ -35,6 +50,11 @@
       }
     }
 
+    > div {
+      display: flex;
+      gap: 16px;
+    }
+
     button {
       border: 0;
       background: transparent;
@@ -61,4 +81,4 @@
       }
     }
   }
-}
+`

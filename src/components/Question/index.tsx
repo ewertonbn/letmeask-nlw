@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
+import cx from 'classnames';
 
-import './styles.scss';
+import { QuestionContent } from './styles';
 
 type QuestionProps = {
   content: string;
@@ -9,15 +10,25 @@ type QuestionProps = {
     avatar: string;
   };
   children?: ReactNode;
+  isAnswered?: boolean;
+  isHighlighted?: boolean;
 }
 
 export function Question({
   content,
   author,
+  isAnswered,
+  isHighlighted,
   children
 }: QuestionProps) {
   return (
-    <div className="question">
+    <QuestionContent
+      className={cx(
+        'question',
+        { answered: isAnswered },
+        { highlighted: isHighlighted && !isAnswered },
+      )}
+    >
       <p>{content}</p>
       <footer>
         <div className="user-info">
@@ -28,6 +39,6 @@ export function Question({
           {children}
         </div>
       </footer>
-    </div>
+    </QuestionContent>
   );
 }
