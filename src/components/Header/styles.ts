@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  padding: 24px;
-  border-bottom: 1px solid #e2e2e2;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-light);
 
   .content {
     max-width: 1120px;
@@ -12,15 +12,15 @@ export const HeaderContainer = styled.header`
     align-items: center;
 
     > img {
-      max-height: 45px;
+      max-height: 2.813rem;
     }
 
     > div {
       display: flex;
-      gap: 16px;
+      gap: 1rem;
 
       button {
-        height: 40px;
+        height: 2.5rem;
       }
     }
   }

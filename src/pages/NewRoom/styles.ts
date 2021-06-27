@@ -9,37 +9,37 @@ export const PageNewRoom = styled.div`
 export const Aside = styled.aside`
   flex: 7;
 
-  background: #835afd;
-  color: #FFF;
+  background: var(--purple);
+  color: var(--white);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding: 120px 80px;
+  padding: 7.5rem 5rem;
 
   img {
-    max-width: 320px;
+    max-width: 20rem;
   }
 
   strong {
-    font: 700 36px 'Poppins', sans-serif;
-    line-height: 42px;
-    margin-top: 16px;
+    font: 700 2.25rem 'Poppins', sans-serif;
+    line-height: 2.625rem;
+    margin-top: 1rem;
   }
 
   p {
-    font-size: 24px;
-    line-height: 32px;
-    margin-top: 16px;
-    color: #f8f8f8;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    color: var(--background);
   }
 `;
 
 export const MainContainer = styled.main`
   flex: 8;
 
-  padding: 0 32px;
+  padding: 0 2rem;
 
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@ export const MainContainer = styled.main`
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 20rem;
     align-items: stretch;
     text-align: center;
 
@@ -58,18 +58,18 @@ export const MainContainer = styled.main`
     }
 
     h2 {
-      font-size: 24px;
-      margin: 64px 0 24px;
+      font-size: 1.5rem;
+      margin: 4rem 0 1.5rem;
       font-family: 'Poppins', sans-serif;
     }
 
     p {
-      font-size: 14px;
-      color: #737380;
-      margin-top: 16px;
+      font-size: 0.875rem;
+      color: var(--gray-dark);
+      margin-top: 1rem;
 
       a {
-        color: #e559f9;
+        color: var(--pink-dark);
       }
     }
   }
@@ -77,15 +77,15 @@ export const MainContainer = styled.main`
 
 export const FormCreateNewRoom = styled.form`
   input {
-    height: 50px;
-    border-radius: 8px;
-    padding: 0 16px;
-    background: #FFFFFF;
-    border: 1px solid #a8a8b3;
+    height: 3.125rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    background: var(--white);
+    border: 1px solid var(--gray-medium);
   }
 
   button {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   button, input {

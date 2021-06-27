@@ -7,29 +7,29 @@ export const PageAdminRoom = styled.div`
     margin: 0 auto;
 
     .room-title {
-      margin: 32px 0 24px;
+      margin: 2rem 0 1.5rem;
       display: flex;
       align-items: center;
 
       h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 24px;
-        color: #29292e;
+        font-size: 1.5rem;
+        color: var(--black);
       }
 
       span {
-        margin-left: 16px;
-        background: #e559f9;
+        margin-left: 1rem;
+        background: var(--pink-dark);
         border-radius: 999px;
-        padding: 8px 16px;
-        color: #FFFFFF;
+        padding: 0.5rem 1rem;
+        color: var(--white);
         font-weight: 500;
-        font-size: 14px;
+        font-size: 0.875rem;
       }
     }
 
     .question-list {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
   }
 `

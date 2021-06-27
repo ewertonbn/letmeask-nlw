@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
 export const ButtonRoomCode = styled.button`
-  height: 40px;
-  border-radius: 8px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 
-  background: #FFFFFF;
-  border: 1px solid #835afd;
+  background: var(--white);
+  border: 1px solid var(--purple);
   cursor: pointer;
 
   display: flex;
 
   div {
-    background: #835afd;
-    padding: 12px;
+    background: var(--purple);
+    padding: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +23,9 @@ export const ButtonRoomCode = styled.button`
     display: block;
     align-self: center;
     flex: 1;
-    padding: 0 16px 0 12px;
-    width: 240px;
-    font-size: 14px;
+    padding: 0 1rem 0 0.75rem;
+    width: 15rem;
+    font-size: 0.875rem;
     font-weight: 500;
   }
 `

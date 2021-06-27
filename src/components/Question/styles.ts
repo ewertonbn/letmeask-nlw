@@ -1,58 +1,58 @@
 import styled from 'styled-components';
 
 export const QuestionContent = styled.div`
-  background: #fefefe;
-  border-radius: 8px;
+  background: var(--gray-100);
+  border-radius: 0.5rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-  padding: 24px;
+  padding: 1.5rem;
 
   & + .question {
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 
   &.highlighted {
-    background: #F4F0FF;
-    border: 1px solid #835adf;
+    background: var(--gray-200);
+    border: 1px solid var(--purple);
 
     footer .user-info span {
-       color: #29292e;
+       color: var(--black);
     }
   }
 
   &.answered {
-    background: #dbdcdd;
+    background: var(--gray-light);
   }
 
   p {
-    color: #29292e;
+    color: var(--black);
   }
 
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 1.5rem;
 
     .user-info {
       display: flex;
       align-items: center;
 
       img {
-        width: 32px;
-        height: 32px;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
       }
 
       span {
-        margin-left: 8px;
-        color: #737380;
-        font-size: 14px;
+        margin-left: 0.5rem;
+        color: var(--gray-dark);
+        font-size: 0.875rem;
       }
     }
 
     > div {
       display: flex;
-      gap: 16px;
+      gap: 1rem;
     }
 
     button {
@@ -64,14 +64,14 @@ export const QuestionContent = styled.div`
       &.like-button {
         display: flex;
         align-items: flex-end;
-        color: #737380;
-        gap: 8px;
+        color: var(--gray-dark);
+        gap: 0.5rem;
 
         &.liked {
-          color: #835afd;
+          color: var(--purple);
 
           svg path {
-            stroke: #835afd;
+            stroke: var(--purple);
           }
         }
       }
