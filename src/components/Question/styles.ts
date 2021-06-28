@@ -11,20 +11,20 @@ export const QuestionContent = styled.div`
   }
 
   &.highlighted {
-    background: var(--gray-200);
+    background: ${props => props.theme.colors.gray200};
     border: 1px solid var(--purple);
 
     footer .user-info span {
-       color: var(--black);
+       color: ${props => props.theme.colors.black};
     }
   }
 
   &.answered {
-    background: var(--gray-light);
+    background: ${props => props.theme.colors.grayLight};
   }
 
   p {
-    color: var(--black);
+    color: ${props => props.theme.colors.black};
   }
 
   footer {
@@ -45,7 +45,7 @@ export const QuestionContent = styled.div`
 
       span {
         margin-left: 0.5rem;
-        color: var(--gray-dark);
+        color: ${props => props.theme.colors.black};
         font-size: 0.875rem;
       }
     }

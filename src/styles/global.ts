@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
-    background: var(--background);
+    background: ${props => props.theme.colors.background};
     color: var(--black);
   }
 

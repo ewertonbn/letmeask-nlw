@@ -14,7 +14,7 @@ export const PageRoom = styled.div`
       h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
-        color: var(--black);
+        color: ${props => props.theme.colors.black};
       }
 
       span {
@@ -40,7 +40,7 @@ export const FormCreateNewRoom = styled.form`
     border: 0;
     padding: 1rem;
     border-radius: 0.5rem;
-    background: var(--gray-100);
+    background: ${props => props.theme.colors.gray100};
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     resize: vertical;
     min-height: 8.125rem;
@@ -64,7 +64,7 @@ export const FormCreateNewRoom = styled.form`
 
       span {
         margin-left: 0.5rem;
-        color: var(--black);
+        color: ${props => props.theme.colors.black};
         font-weight: 500;
         font-size: 0.875rem;
       }
