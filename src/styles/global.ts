@@ -40,6 +40,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background: ${props => props.theme.colors.background};
     color: var(--black);
+    position: relative;
+    height: 100%;
   }
 
   body, input, button, textarea {

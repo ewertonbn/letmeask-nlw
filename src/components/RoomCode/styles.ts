@@ -10,6 +10,7 @@ export const ButtonRoomCode = styled.button`
   cursor: pointer;
 
   display: flex;
+  align-items: center;
 
   div {
     background: var(--purple);

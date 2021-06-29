@@ -5,7 +5,7 @@ import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
 import { Room } from './pages/Room';
 import { AdminRoom } from './pages/AdminRoom';
-import { Footer } from './components/Footer';
+import { ToogleTheme } from './components/ToogleTheme';
 
 import { GlobalStyle } from './styles/global';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
@@ -32,7 +32,7 @@ function App() {
             <Route path="/admin/rooms/:id" component={AdminRoom} />
           </Switch>
         </AuthContextProvider>
-        <Footer toggleTheme={toggleTheme} />
+        <ToogleTheme toggleTheme={toggleTheme} />
         <GlobalStyle />
       </BrowserRouter>
     </ThemeProvider>
