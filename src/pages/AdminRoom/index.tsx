@@ -2,6 +2,8 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useRoom } from '../../hooks/useRoom';
 import { database } from '../../services/firebase';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { Header } from '../../components/Header';
 import { Avatar } from '../../components/Avatar';
 import { RoomCode } from '../../components/RoomCode';
@@ -33,12 +35,16 @@ export function AdminRoom() {
       endedAt: new Date(),
     })
 
+    toast.success("Sala encerrada!")
+
     history.push('/');
   }
 
   async function handleDeleteQuestion(questionId: string) {
     if (window.confirm('Tem certeza que você deseja excluir esta pergunta?')) {
       await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
+
+      toast.success("Pergunta excluida!")
     }
   }
 
@@ -46,16 +52,21 @@ export function AdminRoom() {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
       isAnswered: true,
     });
+
+    toast.success("Você marcou uma pergunta como respondida.")
   }
 
   async function handleHighlightQuestion(questionId: string) {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
       isHighlighted: true,
     });
+
+    toast.success("Você deu destaque para uma pergunta.")
   }
 
   return (
     <PageAdminRoom>
+      <Toaster />
       <Header>
         <img src={logoImg} alt="Letmeask" />
         <div>

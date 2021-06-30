@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const QuestionContent = styled.div`
-  background: var(--gray-100);
+  background: ${props => props.theme.colors.gray100};
   border-radius: 0.5rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 1.5rem;

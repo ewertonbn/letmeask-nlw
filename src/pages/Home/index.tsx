@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FormEvent } from 'react';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { database } from '../../services/firebase';
 import { useAuth } from '../../hooks/useAuth';
 import { Button } from '../../components/Button';
@@ -35,15 +37,19 @@ export function Home() {
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
     if (!roomRef.exists()) {
-      alert('Room does not exists.')
+      toast.error("Esta sala não existe, tente outra.")
       return;
     }
 
     if (roomRef.val().endedAt) {
-      alert('Room already closed.')
+      toast.error("Esta sala foi fechada, não é possível entrar.")
       return;
     }
 
+    toast(`Seja bem-vindo ${user?.name}`, {
+      icon: '👋',
+    })
+    
     history.push(`/rooms/${roomCode}`);
   }
 
@@ -52,6 +58,7 @@ export function Home() {
       <AsideContent />
       <MainContainer>
         <div className="main-content">
+          <Toaster />
           <img src={logoImg} alt="Letmeask" />
           <ButtonCreateRoom onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImage} alt="Logo do Google" />

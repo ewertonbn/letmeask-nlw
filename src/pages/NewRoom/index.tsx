@@ -2,6 +2,8 @@ import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { database } from '../../services/firebase';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/useAuth';
 import { AsideContent } from '../../components/AsideContent';
@@ -29,11 +31,16 @@ export function NewRoom() {
       authorId: user?.id,
     })
 
+    toast(`Seja bem-vindo ${user?.name}`, {
+      icon: '👋',
+    })
+
     history.push(`/rooms/${firebaseRoom.key}`)
   }
 
   return (
     <PageNewRoom>
+      <Toaster />
       <AsideContent />
       <MainContainer>
         <div className="main-content">

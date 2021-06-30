@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { Header } from '../../components/Header';
 import { Avatar } from '../../components/Avatar';
 import { RoomCode } from '../../components/RoomCode';
@@ -37,6 +39,7 @@ export function Room() {
     }
 
     if (!user) {
+      toast.error("Você precisar estar logado para fazer uma pergunta");
       throw new Error('You must be logged in');
     }
 
@@ -51,6 +54,8 @@ export function Room() {
     }
 
     await database.ref(`rooms/${roomId}/questions`).push(question);
+
+    toast.success('Você criou uma nova pergunta!');
 
     setNewQuestion('');
   }
@@ -67,6 +72,7 @@ export function Room() {
 
   return (
     <PageRoom>
+      <Toaster />
       <Header>
         <img src={logoImg} alt="Letmeask" />
         <div>

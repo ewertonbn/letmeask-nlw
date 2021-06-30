@@ -41,6 +41,7 @@ export const FormCreateNewRoom = styled.form`
     padding: 1rem;
     border-radius: 0.5rem;
     background: ${props => props.theme.colors.gray100};
+    color: ${props => props.theme.colors.title};
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     resize: vertical;
     min-height: 8.125rem;
