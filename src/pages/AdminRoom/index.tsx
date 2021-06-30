@@ -1,8 +1,9 @@
 import { useHistory, useParams } from 'react-router-dom';
-// import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
 import { database } from '../../services/firebase';
 
+import { Header } from '../../components/Header';
+import { Avatar } from '../../components/Avatar';
 import { RoomCode } from '../../components/RoomCode';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
@@ -14,14 +15,12 @@ import checkImg from '../../assets/images/check.svg';
 import answerImg from '../../assets/images/answer.svg';
 
 import { PageAdminRoom } from './styles';
-import { Header } from '../../components/Header';
 
 type RoomParams = {
   id: string;
 }
 
 export function AdminRoom() {
-  // const { user } = useAuth();
   const history = useHistory();
   const params = useParams<RoomParams>()
 
@@ -61,14 +60,17 @@ export function AdminRoom() {
         <img src={logoImg} alt="Letmeask" />
         <div>
           <RoomCode code={roomId} />
-          <Button isOutlined onClick={handleEndedRoom}>Encerrar sala</Button>
+          <Avatar />
         </div>
       </Header>
 
       <main>
         <div className="room-title">
-          <h1>Sala - {title}t</h1>
-          {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
+          <div>
+            <h1>Sala - {title}t</h1>
+            {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
+          </div>
+          <Button isOutlined onClick={handleEndedRoom}>Encerrar sala</Button>
         </div>
         
         { questions.length > 0 ? (

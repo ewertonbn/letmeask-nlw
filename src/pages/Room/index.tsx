@@ -1,10 +1,11 @@
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
+import { Header } from '../../components/Header';
+import { Avatar } from '../../components/Avatar';
 import { RoomCode } from '../../components/RoomCode';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
-import { Header } from '../../components/Header';
 import { MessageAlert } from '../../components/MessageAlert';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -68,7 +69,10 @@ export function Room() {
     <PageRoom>
       <Header>
         <img src={logoImg} alt="Letmeask" />
-        <RoomCode code={roomId} />
+        <div>
+          <RoomCode code={roomId} />
+          <Avatar />
+        </div>
       </Header>
 
       <main>
@@ -85,13 +89,8 @@ export function Room() {
           />
 
           <div className="form-footer">
-            { user ? (
-              <div className="user-info">
-                <img src={user.avatar} alt={user.name} />
-                <span>{ user.name }</span>
-              </div>
-            ) : ( 
-              <span>Para enviar uma pergunta, <button>faça seu login</button>.</span>
+            { !user && (
+              <span>Para enviar uma pergunta, <Link to="/">faça seu login</Link>.</span>
             ) }
             <Button type="submit" disabled={!user}>Enviar pergunta</Button>
           </div>

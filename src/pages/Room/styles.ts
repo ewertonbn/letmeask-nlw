@@ -52,32 +52,12 @@ export const FormCreateNewRoom = styled.form`
     align-items: center;
     margin-top: 1rem;
 
-    .user-info {
-      display: flex;
-      align-items: center;
-
-      img {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-      }
-
-      span {
-        margin-left: 0.5rem;
-        color: ${props => props.theme.colors.text};
-        font-weight: 500;
-        font-size: 0.875rem;
-      }
-    }
-
     > span {
       font-size: 0.875rem;
       color: ${props => props.theme.colors.text};
       font-weight: 500;
 
-      button {
-        background: transparent;
-        border: 0;
+      a {
         color: ${props => props.theme.colors.text};
         text-decoration: underline;
         font-size: 0.875rem;
