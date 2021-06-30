@@ -9,7 +9,7 @@ export const PageNewRoom = styled.div`
 export const Aside = styled.aside`
   flex: 7;
 
-  background: var(--purple);
+  background: var(--secondary);
   color: var(--white);
 
   display: flex;
@@ -61,15 +61,16 @@ export const MainContainer = styled.main`
       font-size: 1.5rem;
       margin: 4rem 0 1.5rem;
       font-family: 'Poppins', sans-serif;
+      color: ${props => props.theme.colors.title};
     }
 
     p {
       font-size: 0.875rem;
-      color: var(--gray-dark);
+      color: var(--gray-500);
       margin-top: 1rem;
 
       a {
-        color: var(--pink-dark);
+        color: ${props => props.theme.colors.secondary};
       }
     }
   }
@@ -81,7 +82,7 @@ export const FormCreateNewRoom = styled.form`
     border-radius: 0.5rem;
     padding: 0 1rem;
     background: var(--white);
-    border: 1px solid var(--gray-medium);
+    border: 1px solid var(--gray-400);
   }
 
   button {

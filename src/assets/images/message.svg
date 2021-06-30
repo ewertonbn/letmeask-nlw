@@ -5,7 +5,7 @@
 <circle cx="109.5" cy="71.5001" r="3.5" fill="#F8F8F8"/>
 <circle cx="122.5" cy="71.5001" r="3.5" fill="#F8F8F8"/>
 <circle cx="135.5" cy="71.5001" r="3.5" fill="#F8F8F8"/>
-<path d="M45 100.41V117.281V118.486C45 119.817 46.0886 120.896 47.4314 120.896H63.2353L69.7291 126.838C70.1649 127.237 70.86 126.844 70.7357 126.269L69.3137 119.691H73.5686C74.9114 119.691 76 118.612 76 117.281V100.41C76 99.0792 74.9114 98.0001 73.5686 98.0001H47.4314C46.0886 98.0001 45 99.0792 45 100.41Z" fill="#D67EE2"/>
+<path d="M45 100.41V117.281V118.486C45 119.817 46.0886 120.896 47.4314 120.896H63.2353L69.7291 126.838C70.1649 127.237 70.86 126.844 70.7357 126.269L69.3137 119.691H73.5686C74.9114 119.691 76 118.612 76 117.281V100.41C76 99.0792 74.9114 98.0001 73.5686 98.0001H47.4314C46.0886 98.0001 45 99.0792 45 100.41Z" fill="#6FCF97"/>
 <circle cx="25.5" cy="46.5001" r="3.5" fill="#F8F8F8"/>
 <circle cx="38.5" cy="46.5001" r="3.5" fill="#F8F8F8"/>
 <circle cx="51.5" cy="46.5001" r="3.5" fill="#F8F8F8"/>
@@ -14,12 +14,12 @@
 <circle opacity="0.7" cx="67.9849" cy="109.334" r="2.01515" fill="#F8F8F8"/>
 <defs>
 <linearGradient id="paint0_linear" x1="39.1088" y1="25.0001" x2="39.1088" y2="81.8298" gradientUnits="userSpaceOnUse">
-<stop stop-color="#9A78FF"/>
-<stop offset="1" stop-color="#835AFD"/>
+<stop stop-color="#10DC82"/>
+<stop offset="1" stop-color="#1B4332"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="123.109" y1="50.0001" x2="123.109" y2="106.83" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EF7EFF"/>
-<stop offset="1" stop-color="#E554FA"/>
+<stop stop-color="#00B060"/>
+<stop offset="1" stop-color="#10DC82"/>
 </linearGradient>
 </defs>
 </svg>

@@ -4,20 +4,18 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     title: string;
     colors: {
-      black: string;
-      shadow: string;
-      purple: string;
-      danger: string;
-      red: string;
       gray100: string;
       gray200: string;
-      grayDark: string;
-      grayMedium: string;
-      grayLight: string;
-      pinkDark: string;
-      pinkLight: string;
+      gray300: string;
+      gray400: string;
+      gray500: string;
       background: string;
-      white: string;
+      title: string;
+      text: string;
+      secondary: string;
+      answered: string;
+      inputPrimary : string;
+      inputSecondary : string;
     }
   }
 }

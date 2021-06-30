@@ -9,7 +9,7 @@ export const ToggleButton = styled.div`
   align-items: center;
 
   span { 
-    color: var(--gray-dark);
+    color: var(--gray-500);
     display: inline-block;
     margin-right: 1rem;
   }

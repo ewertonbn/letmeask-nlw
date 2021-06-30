@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   padding: 1.5rem;
-  border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid ${props => props.theme.colors.gray300};
 
   .content {
     max-width: 1120px;

@@ -4,7 +4,7 @@ export const ButtonSend = styled.button`
   height: 3.125rem;
   border-radius: 0.5rem;
   font-weight: 500;
-  background: var(--purple);
+  background: var(--green);
   color: var(--white);
   padding: 0 2rem;
 
@@ -22,9 +22,9 @@ export const ButtonSend = styled.button`
   }
 
   &.outlined {
-    background: var(--white);
-    border: 1px solid var(--purple);
-    color: var(--purple);
+    background: ${props => props.theme.colors.background};
+    border: 1px solid ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 
   &:not(:disabled):hover {

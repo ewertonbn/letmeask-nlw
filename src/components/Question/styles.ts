@@ -11,20 +11,24 @@ export const QuestionContent = styled.div`
   }
 
   &.highlighted {
-    background: ${props => props.theme.colors.gray200};
-    border: 1px solid var(--purple);
+    background: ${props => props.theme.colors.gray100};
+    border: 1px solid ${props => props.theme.colors.gray400};
 
     footer .user-info span {
-       color: ${props => props.theme.colors.black};
+       color: ${props => props.theme.colors.title};
     }
   }
 
   &.answered {
-    background: ${props => props.theme.colors.grayLight};
+    background: ${props => props.theme.colors.answered};
+
+    footer .user-info span {
+      color: ${props => props.theme.colors.title};
+    }
   }
 
   p {
-    color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.title};
   }
 
   footer {
@@ -45,7 +49,7 @@ export const QuestionContent = styled.div`
 
       span {
         margin-left: 0.5rem;
-        color: ${props => props.theme.colors.black};
+        color: ${props => props.theme.colors.text};
         font-size: 0.875rem;
       }
     }
@@ -64,14 +68,14 @@ export const QuestionContent = styled.div`
       &.like-button {
         display: flex;
         align-items: flex-end;
-        color: var(--gray-dark);
+        color: var(--gray-500);
         gap: 0.5rem;
 
         &.liked {
-          color: var(--purple);
+          color: ${props => props.theme.colors.gray400};
 
           svg path {
-            stroke: var(--purple);
+            stroke: ${props => props.theme.colors.gray400};
           }
         }
       }

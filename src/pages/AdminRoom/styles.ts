@@ -14,12 +14,12 @@ export const PageAdminRoom = styled.div`
       h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
-        color: var(--black);
+        color: ${props => props.theme.colors.title};
       }
 
       span {
         margin-left: 1rem;
-        background: var(--pink-dark);
+        background: var(--green);
         border-radius: 999px;
         padding: 0.5rem 1rem;
         color: var(--white);

@@ -5,15 +5,15 @@ export const ButtonRoomCode = styled.button`
   border-radius: 0.5rem;
   overflow: hidden;
 
-  background: var(--white);
-  border: 1px solid var(--purple);
+  background: ${props => props.theme.colors.gray100};
+  border: 1px solid ${props => props.theme.colors.gray400};
   cursor: pointer;
 
   display: flex;
   align-items: center;
 
   div {
-    background: var(--purple);
+    background: var(--green);
     padding: 0.75rem;
     display: flex;
     justify-content: center;
@@ -21,6 +21,7 @@ export const ButtonRoomCode = styled.button`
   }
 
   span {
+    color: ${props => props.theme.colors.title};
     display: block;
     align-self: center;
     flex: 1;

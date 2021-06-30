@@ -7,7 +7,7 @@ export const PageAuth = styled.div`
 
   .separator {
     font-size: 0.875rem;
-    color: var(--gray-medium);
+    color: var(--gray-500);
 
     margin: 2rem 0;
     display: flex;
@@ -17,7 +17,7 @@ export const PageAuth = styled.div`
       content: '';
       flex: 1;
       height: 1px;
-      background: var(--gray-medium);
+      background: var(--gray-300);
       margin-right: 1rem;
     }
 
@@ -25,7 +25,7 @@ export const PageAuth = styled.div`
       content: '';
       flex: 1;
       height: 1px;
-      background: var(--gray-medium);
+      background: var(--gray-300);
       margin-left: 1rem;
     }
   }
@@ -34,7 +34,7 @@ export const PageAuth = styled.div`
 export const Aside = styled.aside`
   flex: 7;
 
-  background: var(--purple);
+  background: var(--secondary);
   color: var(--white);
 
   display: flex;
@@ -90,11 +90,11 @@ export const MainContainer = styled.main`
 
     p {
       font-size: 0.875rem;
-      color: var(--gray-dark);
+      color: var(--gray-500);
       margin-top: 2rem;
 
       a {
-        color: var(--pink-dark);
+        color: var(--pink-500);
       }
     }
   }
@@ -130,8 +130,9 @@ export const FormAuth = styled.form`
     height: 3.125rem;
     border-radius: 0.5rem;
     padding: 0 1rem;
-    background: var(--white);
-    border: 1px solid var(--gray-medium);
+    background: ${props => props.theme.colors.inputPrimary};
+    color: ${props => props.theme.colors.gray400};
+    border: 1px solid var(--gray-400);
   }
 
   button {

@@ -6,5 +6,10 @@ export const MessageContent = styled.div`
 
   h3 {
     margin: 1rem 0;
+    color: ${props => props.theme.colors.title};
+  }
+
+  p {
+    color: ${props => props.theme.colors.text};
   }
 `;

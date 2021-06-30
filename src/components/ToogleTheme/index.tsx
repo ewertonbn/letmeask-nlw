@@ -24,10 +24,10 @@ export function ToogleTheme({ toggleTheme }: ToogleThemeProps) {
           height={15}
           width={50}
           handleDiameter={30}
-          offColor={colors.grayDark}
-          onColor={colors.grayMedium}
-          onHandleColor={colors.purple}
-          offHandleColor={colors.purple}
+          offColor={colors.gray300}
+          onColor={colors.gray400}
+          onHandleColor={colors.secondary}
+          offHandleColor={colors.secondary}
         />
       </ToggleButton>
     </>
