@@ -4,11 +4,11 @@ import { database } from '../../services/firebase';
 
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/useAuth';
+import { AsideContent } from '../../components/AsideContent';
 
-import illustrationImage from '../../assets/images/illustration.svg'
 import logoImg from '../../assets/images/logo.svg'
 
-import { PageNewRoom, Aside, FormCreateNewRoom, MainContainer } from './styles';
+import { PageNewRoom, FormCreateNewRoom, MainContainer } from './styles';
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -34,11 +34,7 @@ export function NewRoom() {
 
   return (
     <PageNewRoom>
-      <Aside>
-        <img src={illustrationImage} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </Aside>
+      <AsideContent />
       <MainContainer>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />

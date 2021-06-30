@@ -5,12 +5,12 @@ import { FormEvent } from 'react';
 import { database } from '../../services/firebase';
 import { useAuth } from '../../hooks/useAuth';
 import { Button } from '../../components/Button';
+import { AsideContent } from '../../components/AsideContent';
 
-import illustrationImage from '../../assets/images/illustration.svg'
 import logoImg from '../../assets/images/logo.svg'
 import googleIconImage from '../../assets/images/google-icon.svg'
 
-import { Aside, ButtonCreateRoom, FormAuth, MainContainer, PageAuth } from './styles';
+import { ButtonCreateRoom, FormAuth, MainContainer, PageAuth } from './styles';
 
 export function Home() {
   const history = useHistory();
@@ -49,11 +49,7 @@ export function Home() {
 
   return (
     <PageAuth>
-      <Aside>
-        <img src={illustrationImage} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
-      </Aside>
+      <AsideContent />
       <MainContainer>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
