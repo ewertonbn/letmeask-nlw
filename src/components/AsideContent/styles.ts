@@ -12,6 +12,10 @@ export const AsideContainer = styled.aside`
 
   padding: 7.5rem 5rem;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   img {
     max-width: 20rem;
   }

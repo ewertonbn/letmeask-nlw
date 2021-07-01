@@ -29,5 +29,9 @@ export const ButtonRoomCode = styled.button`
     width: 15rem;
     font-size: 0.875rem;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `

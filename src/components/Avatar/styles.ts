@@ -14,5 +14,9 @@ export const AvatarContainer = styled.div`
     margin-left: 0.5rem;
     color: ${props => props.theme.colors.text};
     font-size: 0.875rem;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
   }
 `;

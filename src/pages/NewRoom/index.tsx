@@ -35,7 +35,7 @@ export function NewRoom() {
       icon: '👋',
     })
 
-    history.push(`/rooms/${firebaseRoom.key}`)
+    history.push(`/admin/rooms/${firebaseRoom.key}`)
   }
 
   return (

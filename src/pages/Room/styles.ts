@@ -5,11 +5,16 @@ export const PageRoom = styled.div`
   main {
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 3rem;
 
     .room-title {
       margin: 2rem 0 1.5rem;
       display: flex;
       align-items: center;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+      }
 
       h1 {
         font-family: 'Poppins', sans-serif;
@@ -30,11 +35,19 @@ export const PageRoom = styled.div`
 
     .question-list {
       margin-top: 2rem;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+      }
     }
   }
 `;
 
 export const FormCreateNewRoom = styled.form`
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+
   textarea {
     width: 100%;
     border: 0;
