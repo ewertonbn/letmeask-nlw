@@ -21,7 +21,7 @@
   Application developed at Next Level Week # 6
 </h2>
 
-<br><br>
+<br>
 
 <h1 align="left"> 
   Your platform to answer your audience's questions
