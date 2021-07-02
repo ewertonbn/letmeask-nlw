@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FormEvent } from 'react';
 
 import toast, { Toaster } from 'react-hot-toast';
 
